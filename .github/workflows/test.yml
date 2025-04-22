@@ -1,17 +1,17 @@
 name: Run Tests
 
 on:
-  push:
-    branches:
-      - feature/examen
+    push:
+        branches:
+            - feature/examen
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - run: npm install
-      - run: npm run test
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: '16'
+
+            - run: npm run test
