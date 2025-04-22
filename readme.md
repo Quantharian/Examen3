@@ -52,3 +52,5 @@ Repo Service (1 punto)
 
 - Conforme completes las tareas, haz los commit necesarios.
 - Cuando termines, mergea la PR en la rama principal. Tu GitHub Action debería comprobar que los test pasan y que no hay errores en el código. Si no es así, no deberías poder hacer merge.
+
+jjjjjj
