@@ -31,3 +31,22 @@ it('should trigger submit event', () => {
 
     expect(handleSubmit).toHaveBeenCalled();
 });
+it('should prevent default and call the submit handler', () => {
+    const form = createFormAdd();
+    const handleSubmit = vi.fn();
+    const preventDefault = vi.fn();
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        preventDefault();
+        handleSubmit();
+    });
+
+    const submitButton = form.querySelector(
+        'button[type="submit"]',
+    ) as HTMLButtonElement;
+    submitButton.click();
+
+    expect(preventDefault).toHaveBeenCalled();
+    expect(handleSubmit).toHaveBeenCalled();
+});

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // filepath: src/back/tests/products.controller.test.ts
 import { describe, it, expect, vi } from 'vitest';
-import { ProductsController } from './products.controller';
-import { ProductRepo } from '../repo/products.repository';
+import { ProductsController } from '../products.controller';
+import { ProductRepo } from '../../repo/products.repository';
 
 describe('ProductsController', () => {
     const mockRepo = {
